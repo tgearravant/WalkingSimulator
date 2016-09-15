@@ -2,7 +2,7 @@ package net.tullco.walkingsimulator.models;
 
 import java.util.ArrayList;
 
-import javafx.scene.canvas.GraphicsContext;
+
 import javafx.scene.shape.Shape;
 
 public abstract class Level implements Renderable {
@@ -13,9 +13,14 @@ public abstract class Level implements Renderable {
 	
 	public Level(){
 	}
+	
+	public abstract int getStartingX();
+	public abstract int getStartingY();
+	
 	@Override
-	public void render(GraphicsContext gc) {
-		
+	public void render() {
+		for(Renderable r: renderables)
+			r.render();
 	}
 	public boolean checkCollision(Shape s) {
 		for(Collidable c: collidables){

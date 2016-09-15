@@ -13,4 +13,19 @@ public class FirstLevel extends Level {
 	public int getGroundLevel(){
 		return GROUND_LEVEL;
 	}
+	@Override
+	public void render() {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public int getStartingX() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	@Override
+	public int getStartingY() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

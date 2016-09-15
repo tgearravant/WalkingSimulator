@@ -7,7 +7,6 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.canvas.Canvas;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
@@ -26,7 +25,7 @@ public class WalkingSimulator extends Application {
 		primaryStage.setTitle("Walking Simulator 2016");
 		Group root = new Group();
 		Scene primaryScene = new Scene(root);
-		View theView = new View(root);
+		View.init(root);
 		primaryStage.setScene(primaryScene);
 		primaryStage.show();
 		Timeline gameLoop = new Timeline();
